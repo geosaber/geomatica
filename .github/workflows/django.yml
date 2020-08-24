@@ -28,3 +28,15 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
+# Install from PyPI
+- pip install mezzanine
+
+# Create a project
+- mezzanine-project myproject
+- cd myproject
+
+# Create a database
+- python manage.py createdb
+
+# Run the web server
+- python manage.py runserver
